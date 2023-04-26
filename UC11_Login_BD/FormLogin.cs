@@ -40,15 +40,15 @@ namespace UC11_Login_BD
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
             conexao.Open();
-            comando.CommandText = "INSERT INTO usuarios(usuario, senha) VALUES ('lemuel', 'lemuel1234');";
-
+            comando.CommandText = "INSERT INTO usuarios(usuario, senha) VALUES ('" + textBoxUSUARIO.Text + "', '" + textBoxSENHA.Text + "');";
+            
             try
             {
                 comando.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception erro)
             {
-
+                MessageBox.Show(erro.Message);
             }
             finally
             {
