@@ -44,7 +44,7 @@ namespace UC11_Login_BD
 
             try
             {
-
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -54,11 +54,12 @@ namespace UC11_Login_BD
             {
 
             }
+            MessageBox.Show("Cadastrado com sucesso!");
         }
 
         private void buttonFECHAR_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Obrigado por utilizar nosso Programa de Cadastro");
+            MessageBox.Show("Obrigado por utilizar nosso Programa de Cadastro!");
             Application.Exit();                        
         }
     }
