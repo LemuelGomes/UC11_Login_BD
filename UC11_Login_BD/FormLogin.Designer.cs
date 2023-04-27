@@ -80,6 +80,7 @@
             // 
             // buttonENTRAR
             // 
+            this.buttonENTRAR.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonENTRAR.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonENTRAR.ForeColor = System.Drawing.Color.SteelBlue;
             this.buttonENTRAR.Location = new System.Drawing.Point(109, 264);
