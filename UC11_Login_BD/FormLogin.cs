@@ -25,7 +25,6 @@ namespace UC11_Login_BD
             comando = conexao.CreateCommand();
             labelERRO.Text = "";
         }
-
         private void buttonENTRAR_Click(object sender, EventArgs e)
         {
             if (textBoxUSUARIO.Text != "" && textBoxSENHA.Text != "")
@@ -63,14 +62,12 @@ namespace UC11_Login_BD
                 MessageBox.Show("Usuário e/ou Senha não inseridos!");
             }
         }
-
         private void buttonLIMPAR_Click(object sender, EventArgs e)
         {
             textBoxUSUARIO.Clear();
             textBoxSENHA.Clear();
             labelERRO.Text = "";
         }
-
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
             bool novoUsuario = true;
