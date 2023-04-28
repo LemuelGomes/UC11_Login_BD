@@ -38,87 +38,111 @@
             this.buttonCADASTRAR = new System.Windows.Forms.Button();
             this.buttonFECHAR = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelERRO = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxSENHA
             // 
-            this.textBoxSENHA.Location = new System.Drawing.Point(109, 195);
+            this.textBoxSENHA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSENHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSENHA.Location = new System.Drawing.Point(109, 200);
             this.textBoxSENHA.Name = "textBoxSENHA";
             this.textBoxSENHA.PasswordChar = '●';
-            this.textBoxSENHA.Size = new System.Drawing.Size(202, 20);
+            this.textBoxSENHA.Size = new System.Drawing.Size(202, 21);
             this.textBoxSENHA.TabIndex = 0;
             // 
             // textBoxUSUARIO
             // 
+            this.textBoxUSUARIO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUSUARIO.Location = new System.Drawing.Point(109, 126);
             this.textBoxUSUARIO.Name = "textBoxUSUARIO";
-            this.textBoxUSUARIO.Size = new System.Drawing.Size(202, 20);
+            this.textBoxUSUARIO.Size = new System.Drawing.Size(202, 21);
             this.textBoxUSUARIO.TabIndex = 1;
             // 
             // labelUSUARIO
             // 
             this.labelUSUARIO.AutoSize = true;
-            this.labelUSUARIO.BackColor = System.Drawing.Color.DarkBlue;
-            this.labelUSUARIO.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUSUARIO.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUSUARIO.Location = new System.Drawing.Point(181, 105);
+            this.labelUSUARIO.BackColor = System.Drawing.Color.Transparent;
+            this.labelUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUSUARIO.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelUSUARIO.Location = new System.Drawing.Point(180, 103);
             this.labelUSUARIO.Name = "labelUSUARIO";
-            this.labelUSUARIO.Size = new System.Drawing.Size(64, 18);
+            this.labelUSUARIO.Size = new System.Drawing.Size(71, 20);
             this.labelUSUARIO.TabIndex = 2;
             this.labelUSUARIO.Text = "Usuário";
             // 
             // labelSENHA
             // 
             this.labelSENHA.AutoSize = true;
-            this.labelSENHA.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSENHA.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelSENHA.Location = new System.Drawing.Point(181, 174);
+            this.labelSENHA.BackColor = System.Drawing.Color.Transparent;
+            this.labelSENHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSENHA.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelSENHA.Location = new System.Drawing.Point(180, 177);
             this.labelSENHA.Name = "labelSENHA";
-            this.labelSENHA.Size = new System.Drawing.Size(53, 18);
+            this.labelSENHA.Size = new System.Drawing.Size(61, 20);
             this.labelSENHA.TabIndex = 3;
             this.labelSENHA.Text = "Senha";
             // 
             // buttonENTRAR
             // 
+            this.buttonENTRAR.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonENTRAR.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonENTRAR.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonENTRAR.ForeColor = System.Drawing.Color.SteelBlue;
-            this.buttonENTRAR.Location = new System.Drawing.Point(109, 264);
+            this.buttonENTRAR.FlatAppearance.BorderSize = 0;
+            this.buttonENTRAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonENTRAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonENTRAR.ForeColor = System.Drawing.Color.White;
+            this.buttonENTRAR.Image = global::UC11_Login_BD.Properties.Resources.btn_entrar;
+            this.buttonENTRAR.Location = new System.Drawing.Point(109, 269);
             this.buttonENTRAR.Name = "buttonENTRAR";
-            this.buttonENTRAR.Size = new System.Drawing.Size(77, 30);
+            this.buttonENTRAR.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.buttonENTRAR.Size = new System.Drawing.Size(90, 30);
             this.buttonENTRAR.TabIndex = 4;
             this.buttonENTRAR.Text = "Entrar";
-            this.buttonENTRAR.UseVisualStyleBackColor = true;
+            this.buttonENTRAR.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonENTRAR.UseVisualStyleBackColor = false;
             this.buttonENTRAR.Click += new System.EventHandler(this.buttonENTRAR_Click);
             // 
             // buttonLIMPAR
             // 
-            this.buttonLIMPAR.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLIMPAR.ForeColor = System.Drawing.Color.SteelBlue;
-            this.buttonLIMPAR.Location = new System.Drawing.Point(233, 264);
+            this.buttonLIMPAR.BackColor = System.Drawing.Color.DimGray;
+            this.buttonLIMPAR.FlatAppearance.BorderSize = 0;
+            this.buttonLIMPAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLIMPAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLIMPAR.ForeColor = System.Drawing.Color.White;
+            this.buttonLIMPAR.Image = global::UC11_Login_BD.Properties.Resources.limpar_limpo;
+            this.buttonLIMPAR.Location = new System.Drawing.Point(233, 269);
             this.buttonLIMPAR.Name = "buttonLIMPAR";
-            this.buttonLIMPAR.Size = new System.Drawing.Size(78, 30);
+            this.buttonLIMPAR.Size = new System.Drawing.Size(95, 30);
             this.buttonLIMPAR.TabIndex = 5;
             this.buttonLIMPAR.Text = "Limpar";
-            this.buttonLIMPAR.UseVisualStyleBackColor = true;
+            this.buttonLIMPAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonLIMPAR.UseVisualStyleBackColor = false;
             this.buttonLIMPAR.Click += new System.EventHandler(this.buttonLIMPAR_Click);
             // 
             // buttonCADASTRAR
             // 
-            this.buttonCADASTRAR.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCADASTRAR.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCADASTRAR.FlatAppearance.BorderSize = 0;
+            this.buttonCADASTRAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCADASTRAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCADASTRAR.ForeColor = System.Drawing.Color.Red;
-            this.buttonCADASTRAR.Location = new System.Drawing.Point(150, 330);
+            this.buttonCADASTRAR.Image = global::UC11_Login_BD.Properties.Resources.conecte_se;
+            this.buttonCADASTRAR.Location = new System.Drawing.Point(150, 335);
             this.buttonCADASTRAR.Name = "buttonCADASTRAR";
-            this.buttonCADASTRAR.Size = new System.Drawing.Size(115, 36);
+            this.buttonCADASTRAR.Size = new System.Drawing.Size(115, 39);
             this.buttonCADASTRAR.TabIndex = 6;
             this.buttonCADASTRAR.Text = "Cadastrar";
-            this.buttonCADASTRAR.UseVisualStyleBackColor = true;
+            this.buttonCADASTRAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCADASTRAR.UseVisualStyleBackColor = false;
             this.buttonCADASTRAR.Click += new System.EventHandler(this.buttonCADASTRAR_Click);
             // 
             // buttonFECHAR
             // 
-            this.buttonFECHAR.BackColor = System.Drawing.Color.Snow;
-            this.buttonFECHAR.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFECHAR.BackColor = System.Drawing.Color.Transparent;
+            this.buttonFECHAR.FlatAppearance.BorderSize = 0;
+            this.buttonFECHAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFECHAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFECHAR.ForeColor = System.Drawing.Color.Red;
             this.buttonFECHAR.Location = new System.Drawing.Point(344, 378);
             this.buttonFECHAR.Name = "buttonFECHAR";
@@ -131,22 +155,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(31, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 29);
+            this.label1.Size = new System.Drawing.Size(355, 26);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Faça seu Login em nosso Aplicativo";
+            this.label1.Text = "Faça seu Login em nosso Aplicativo!";
+            // 
+            // labelERRO
+            // 
+            this.labelERRO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelERRO.BackColor = System.Drawing.Color.Transparent;
+            this.labelERRO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelERRO.ForeColor = System.Drawing.Color.Crimson;
+            this.labelERRO.Location = new System.Drawing.Point(109, 226);
+            this.labelERRO.Name = "labelERRO";
+            this.labelERRO.Size = new System.Drawing.Size(202, 23);
+            this.labelERRO.TabIndex = 9;
+            this.labelERRO.Text = "Usuário e/ou Senha Incorretos!";
+            this.labelERRO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
+            this.BackgroundImage = global::UC11_Login_BD.Properties.Resources.Imagem_papeldeparede_login;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(416, 414);
+            this.Controls.Add(this.labelERRO);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonFECHAR);
             this.Controls.Add(this.buttonCADASTRAR);
@@ -175,6 +217,7 @@
         private System.Windows.Forms.Button buttonCADASTRAR;
         private System.Windows.Forms.Button buttonFECHAR;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelERRO;
     }
 }
 

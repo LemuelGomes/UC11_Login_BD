@@ -20,40 +20,47 @@ namespace UC11_Login_BD
         public FormLogin()
         {
             InitializeComponent();
-
             servidor = "Server=localhost;Database=login_bd;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
+            labelERRO.Text = "";
         }
 
         private void buttonENTRAR_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxUSUARIO.Text != "" && textBoxSENHA.Text != "")
             {
-                conexao.Open();
-                comando.CommandText = "SELECT usuario, senha FROM usuarios WHERE usuario = '" + textBoxUSUARIO.Text + "' AND senha = '" + textBoxSENHA.Text + "';";
-
-                MySqlDataReader resultadoPesquisa = comando.ExecuteReader();
-
-                if (resultadoPesquisa.Read())
+                try
                 {
-                    MessageBox.Show("Usuário e Senha Corretos! Você está logado!");
-                    textBoxUSUARIO.Clear();
-                    textBoxSENHA.Clear();
+                    conexao.Open();
+                    comando.CommandText = "SELECT usuario, senha FROM usuarios WHERE usuario = '" + textBoxUSUARIO.Text + "' AND senha = '" + textBoxSENHA.Text + "';";
+
+                    MySqlDataReader resultadoPesquisa = comando.ExecuteReader();
+
+                    if (resultadoPesquisa.Read())
+                    {
+                        MessageBox.Show("Usuário e Senha Corretos! Você está logado!");
+                        textBoxUSUARIO.Clear();
+                        textBoxSENHA.Clear();
+                    }
+                    else
+                    {
+                        labelERRO.Text = ("Usuário e/ou Senha Incorreto!");
+                        textBoxSENHA.Clear();
+                    }
                 }
-                else
+                catch (Exception erro)
                 {
-                    MessageBox.Show("Usuário e/ou Senha Incorreto, Por favor verifique novamente! ");
-                    textBoxSENHA.Clear();
+                    MessageBox.Show("Erro ao cadastrar o usuário.Fale com o administrador do sistema.");
+                }
+                finally
+                {
+                    conexao.Close();
                 }
             }
-            catch (Exception erro)
+            else
             {
-                MessageBox.Show("Erro ao cadastrar o usuário.Fale com o administrador do sistema.");
-            }
-            finally
-            {
-                conexao.Close();
+                MessageBox.Show("Usuário e/ou Senha não inseridos!");
             }
         }
 
@@ -61,57 +68,65 @@ namespace UC11_Login_BD
         {
             textBoxUSUARIO.Clear();
             textBoxSENHA.Clear();
+            labelERRO.Text = "";
         }
 
         private void buttonCADASTRAR_Click(object sender, EventArgs e)
         {
             bool novoUsuario = true;
 
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "SELECT usuario, senha FROM usuarios WHERE usuario = '" + textBoxUSUARIO.Text + "' AND senha = '" + textBoxSENHA.Text + "';";
-
-                MySqlDataReader resultadoPesquisa = comando.ExecuteReader();
-
-                if (resultadoPesquisa.Read())
-                {
-                    novoUsuario = false;
-                    MessageBox.Show("Usuário já Cadastrado! Tente outro Usuário!");
-                    textBoxUSUARIO.Clear();
-                    textBoxSENHA.Clear();
-                }
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro ao cadastrar o usuário.Fale com o administrador do sistema.");
-            }
-            finally
-            {
-                conexao.Close();
-            }
-
-            /// ---------------- ///
-
-            if (novoUsuario)
+            if (textBoxUSUARIO.Text != "" && textBoxSENHA.Text != "")
             {
                 try
                 {
                     conexao.Open();
-                    comando.CommandText = "INSERT INTO usuarios(usuario, senha) VALUES ('" + textBoxUSUARIO.Text + "', '" + textBoxSENHA.Text + "');";
-                    comando.ExecuteNonQuery();
+                    comando.CommandText = "SELECT usuario, senha FROM usuarios WHERE usuario = '" + textBoxUSUARIO.Text + "' AND senha = '" + textBoxSENHA.Text + "';";
+
+                    MySqlDataReader resultadoPesquisa = comando.ExecuteReader();
+
+                    if (resultadoPesquisa.Read())
+                    {
+                        novoUsuario = false;
+                        MessageBox.Show("Usuário já Cadastrado!");
+                        textBoxUSUARIO.Clear();
+                        textBoxSENHA.Clear();
+                    }
                 }
                 catch (Exception erro)
                 {
-                    MessageBox.Show("Erro ao cadastrar o usuário. Fale com o administrador do sistema.");
+                    MessageBox.Show("Erro ao cadastrar o usuário.Fale com o administrador do sistema.");
                 }
                 finally
                 {
                     conexao.Close();
-                    MessageBox.Show("Cadastrado com sucesso!");
                 }
-                textBoxUSUARIO.Clear();
-                textBoxSENHA.Clear();
+
+                /// ---------------- ///
+                
+                if (novoUsuario)
+                {
+                    try
+                    {
+                        conexao.Open();
+                        comando.CommandText = "INSERT INTO usuarios(usuario, senha) VALUES ('" + textBoxUSUARIO.Text + "', '" + textBoxSENHA.Text + "');";
+                        comando.ExecuteNonQuery();
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show("Erro ao cadastrar o usuário. Fale com o administrador do sistema.");
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                        MessageBox.Show("Cadastrado com sucesso!");
+                    }
+                    textBoxUSUARIO.Clear();
+                    textBoxSENHA.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuário e/ou Senha não inseridos!");
             }
         }
         private void buttonFECHAR_Click(object sender, EventArgs e)
